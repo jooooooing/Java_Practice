@@ -6,9 +6,8 @@ public class A4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		Scanner scan = new Scanner(System.in);
-		String[] arrayWord;
 
 		System.out.println("#Menu\n1. Encryption\n2. Decryption\n");
 		int inputMenu = scan.nextInt();
@@ -27,7 +26,7 @@ public class A4 {
 			} else if (inputMenu == 2) {
 				arraySave[i] = (char) (charArr[i] - 4);
 				System.out.print(arraySave[i]);
-			} 
+			}
 		}
 	}
 }
