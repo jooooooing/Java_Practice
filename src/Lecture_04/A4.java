@@ -12,9 +12,6 @@ public class A4 {
 		System.out.println("#Menu\n1. Encryption\n2. Decryption\n");
 		int inputMenu = scan.nextInt();
 
-		String encryStr; // 문자열 + 4 //
-		String decryStr; // 문자열 - 4 //
-
 		String inputStr = scan.next();
 		char[] charArr = inputStr.toCharArray(); // 문자를 한글자씩 나누어 배열로 저장
 
