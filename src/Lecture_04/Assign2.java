@@ -9,7 +9,7 @@ public class Assign2 {
 
 		Scanner scan = new Scanner(System.in);
 		String str = scan.next();
-		String replace = str.replaceAll("  ", ""); //공백 제거 시 오류
+		String replace = str.replaceAll("  ", ""); 
 		String lowerStr = replace.toLowerCase();
 		
 		char[] charArr = lowerStr.toCharArray();
