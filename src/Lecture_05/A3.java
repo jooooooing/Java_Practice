@@ -9,7 +9,7 @@ public class A3 {
 
 		Scanner scan = new Scanner(System.in);
 		int inputNum = scan.nextInt();
-		
+
 		multiTable(inputNum, 2);
 
 	}
@@ -18,8 +18,8 @@ public class A3 {
 		if (depth > 9) {
 			return;
 		}
-		System.out.println(inputNum + "*" + depth + "=" + inputNum*depth);
-		multiTable(inputNum, depth+1);
+		System.out.println(inputNum + "*" + depth + "=" + inputNum * depth);
+		multiTable(inputNum, depth + 1);
 
 	}
 
