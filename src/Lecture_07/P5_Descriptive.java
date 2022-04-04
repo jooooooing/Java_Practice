@@ -5,7 +5,10 @@ public class P5_Descriptive {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String[][] scoreTable = { {"Name", "Korean", "English", "Math"}, { "jeong", "70", "80", "100" }, {"Pyo", "60", "70", "86" }, {"Choi", "54", "100", "82" },
+		String[][] scoreTable = { {"Name", "Korean", "English", "Math"}, 
+				{ "jeong", "70", "80", "100" }, 
+				{"Pyo", "60", "70", "86" }, 
+				{"Choi", "54", "100", "82" },
 				{ "Mike", "87", "95", "79" } };
 
 		int subSum = {}, subMin = {}, subMax = {};

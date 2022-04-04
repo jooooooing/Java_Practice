@@ -12,12 +12,12 @@ public class P4_Sort {
 
 		for (int i = 0; i < numArray.length; i++) {
 			for (int j = 0; j < numArray[i]; j++) {
-				if (numArray[i] > numArray[(numArray.length-1)]) {
-					min = numArray[(numArray.length-1)];
+				if (numArray[i] > numArray[(numArray.length - 1)]) {
+					min = numArray[(numArray.length - 1)];
 					max = numArray[i];
-				} else if (numArray[i] < numArray[(numArray.length-1)]) {
+				} else if (numArray[i] < numArray[(numArray.length - 1)]) {
 					min = numArray[i];
-					max = numArray[(numArray.length-1)];
+					max = numArray[(numArray.length - 1)];
 				}
 
 			}
