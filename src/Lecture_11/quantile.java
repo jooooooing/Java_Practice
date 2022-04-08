@@ -41,6 +41,8 @@ public class quantile {
 		System.out.println("3분위값 : " + quart3);
 		System.out.println("4분위값 : " + full);
 	}
+	
+	//4분위 값 계산 조정 필요
 
 	public static int median(int[] arr) {
 		int arrLength = arr.length;
