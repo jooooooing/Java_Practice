@@ -15,10 +15,7 @@ public class A1 extends Thread {
 		thread.start();
 		System.out.println(getCurrentTime());
 		Scanner scan = new Scanner(System.in);
-		inputTime = scan.nextInt();
-		
-		
-		
+		inputTime = scan.nextInt();		
 
 	}
 

@@ -10,61 +10,64 @@ public class A3 {
 		A3 call = new A3();
 		Scanner scan = new Scanner(System.in);
 		int inputNum = scan.nextInt();
+		
+		System.out.println("0 : Rock, 1 : Paper, 3 : Scissor");
 
 		System.out.println("User : " + inputResult(inputNum));
 		System.out.println("Computer : " + rpsResult());
-
-		whoWin();
+		
+		
+		whoWin(inputResult(inputNum));
 
 	}
 
-	public static String inputResult(int inputNum) {
-		String input = "";
+	public static int inputResult(int inputNum) {
+		int input = 0;
 		if (inputNum == 0) {
-			input = "Rock";
+			input = 0;
 		} else if (inputNum == 1) {
-			input = "Paper";
+			input = 1;
 		} else if (inputNum == 2) {
-			input = "Scissor";
+			input = 2;
 		} else {
-			input = "Error";
+			System.out.println("Error");
 		}
 		return input;
 	}
 
-	public static String rpsResult() {
-		String ret = "";
+	public static int rpsResult() {
+		int ret = 0;
 		int randomNumber = (int) (Math.random() * 3);
 		if (randomNumber == 0) {
-			ret = "Rock";
+			ret = 0;
 		} else if (randomNumber == 1) {
-			ret = "Paper";
+			ret = 1;
 		} else {
-			ret = "Scissor";
+			ret = 2;
 		}
 		return ret;
 	}
 
-	public static void whoWin() {
-		int inputNum = 0;
+	public static void whoWin(int inputNum) {
+		
 		if (inputResult(inputNum) == rpsResult()) {
 			System.out.println("Draw");
-		} else if (inputResult(inputNum) == "Rock") {
-			if (rpsResult() == "Paper") {
+		} else if (inputResult(inputNum) == 0) {
+			if (rpsResult() == 1) {
 				System.out.println("YOU LOSE");
-			} else if (rpsResult() == "Scissor") {
+			} else if (rpsResult() == 2) {
 				System.out.println("YOU WIN");
 			}
-		} else if (inputResult(inputNum) == "Paper") {
-			if (rpsResult() == "Scissor") {
+		} else if (inputResult(inputNum) == 1) {
+			if (rpsResult() == 2) {
 				System.out.println("YOU LOSE");
-			} else if (rpsResult() == "Rock") {
+			} else if (rpsResult() == 0) {
 				System.out.println("YOU WIN");
 			}
-		} else if (inputResult(inputNum) == "Scissor") {
-			if (rpsResult() == "Rock") {
+		} else if (inputResult(inputNum) == 2) {
+			if (rpsResult() == 0) {
 				System.out.println("YOU LOSE");
-			} else if (rpsResult() == "Paper") {
+			} else if (rpsResult() == 1) {
 				System.out.println("YOU WIN");
 			}
 		} else {
