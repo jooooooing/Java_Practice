@@ -1,4 +1,4 @@
-package Lecture_11;
+package javaProject;
 
 import java.util.Arrays;
 import java.util.Scanner;
