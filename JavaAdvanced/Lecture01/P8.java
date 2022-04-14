@@ -18,15 +18,15 @@ public class P8 {
 		for (int i = 0; i < k31_item.length; i++) { //상품목록만큼 반복문 실행
 			int k31_sum=k31_price[i]*k31_amount[i]; //합계  = 품목 * 구매수량
 			k31_totalSum=k31_totalSum+k31_sum; // 지불금액 누적(상품 목록만큼 반복)
-			System.out.printf("%.5s		%2d		%2d		%5d\n", k31_item[i], k31_price[i], k31_amount[i], k31_sum);
+			System.out.printf("%.5s		%2d		%2d		%5d\n", k31_item[i], k31_price[i], k31_amount[i], k31_sum); //출력
 		}
-		System.out.printf("*******************************************************\n");
-		System.out.printf("지불금액 :%43d\n", k31_totalSum);
+		System.out.printf("*******************************************************\n"); //영수증 구분선
+		System.out.printf("지불금액 :%43d\n", k31_totalSum); // 누적합계금액 출력
 		
 		int k31_totalNetPrice = (int)(k31_totalSum / (1+k31_taxRate)); //과세금액 계산 (지불금액 / (1+세율))
-		System.out.printf("과세금액 :%43d\n",k31_totalNetPrice);
-		int k31_tax = k31_totalSum - k31_totalNetPrice;
-		System.out.printf("세    금 :%43d\n", k31_tax);
+		System.out.printf("과세금액 :%43d\n",k31_totalNetPrice); // 과세금액 출력
+		int k31_tax = k31_totalSum - k31_totalNetPrice; // 세금 = 지불금액 - 과세금액
+		System.out.printf("세   금 :%43d\n", k31_tax); // 세금 출력
 	}
 
 }
