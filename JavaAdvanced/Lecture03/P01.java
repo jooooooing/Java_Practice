@@ -10,13 +10,8 @@ public class P01 {
 			System.out.print("구구단" +i + "단\t"+"구구단" +(i+1) + "단\t"+"구구단" +(i+2) + "단\n");
 			System.out.print("===========\t"+"===========\t"+"===========\n");
 			for (int j = 1; j <10; j ++) { // for 반복문 i는 1부터 9까지 1씩 더함
-				System.out.println(i + "*" + j + "=" + i*j +"\t\t"+ (i+1) + "*" + j + "=" + (i+1)*j +"\t\t"+ (i+2) + "*" + j + "=" + (i+2)*j);
-		
+				System.out.println(i + "*" + j + "=" + i*j +"\t\t"+ (i+1) + "*" + j + "=" + (i+1)*j +"\t\t"+ (i+2) + "*" + j + "=" + (i+2)*j);		
 			}
-			
 		}
-
-		
 	}
-
 }
