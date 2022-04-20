@@ -19,7 +19,8 @@ public class p14 {
 		System.out.printf("=====================================================================\n");
 		
 		//°ª Âï±â
-		System.out.printf("%20.20s %10.10s %10.10s %10.10s\n", k31_item, df.format(k31_unit_price), df.format(k31_num), df.format(k31_total));
+		System.out.printf("%20.20s %10.10s %10.10s %10.10s\n", k31_item, df.format(k31_unit_price), 
+				df.format(k31_num), df.format(k31_total));
 		System.out.printf("=====================================================================\n");
 
 	}

@@ -10,9 +10,9 @@ public class P04 {
 		int korean = 100, english = 100, math = 100, science = 100, society = 100;
 		
 		System.out.println("3월 성적표");
-		System.out.println("======================================================");
+		System.out.println("=============================================");
 		System.out.println("이름\t 국어\t 영어\t 수학\t 총점\t 평균");
-		System.out.println("======================================================");
+		System.out.println("=============================================");
 		System.out.printf("%s\t %d\t %d\t %d\t %d\t %d\t\n", name, korean, english, math, main.sum(korean, english, math), main.avg(korean, english, math));
 		System.out.println();
 		
@@ -24,9 +24,9 @@ public class P04 {
 		System.out.println();
 		
 		System.out.println("5월 성적표");
-		System.out.println("======================================================");
+		System.out.println("============================================================");
 		System.out.println("이름\t 국어\t 영어\t 수학\t 과학\t 사회\t 총점\t 평균");
-		System.out.println("======================================================");
+		System.out.println("============================================================");
 		System.out.printf("%s\t %d\t %d\t %d\t %d\t %d\t %d\t %d\t\n", name, korean, english, math, science, society, main.sum(korean, english, math, science, society), main.avg(korean, english, math, science, society));
 		
 	}
