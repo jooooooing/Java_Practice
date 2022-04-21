@@ -13,7 +13,7 @@ public class Self01 {
 		
 		int k31_iPerson = 30; // 이 값을 주는 만큼 저장소 생성
 		
-		InputData01 inData = new InputData01(k31_iPerson+1); //생성자의 숫자만큼 배열을 만든다.
+		InputData inData = new InputData(k31_iPerson+1); //생성자의 숫자만큼 배열을 만든다.
 		
 		for(int i = 0; i < k31_iPerson+1; i ++) {
 			String k31_name = String.format("홍길%02d", i); // 이름 만들기
