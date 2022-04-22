@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class P04 {
+public class P04_01 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -23,8 +23,8 @@ public class P04 {
 
 		String[] k31_field_name = k31_readtxt.split(","); // 항목이름 String 배열 = readtxt를 ,로 나눈 값 저장
 
-		double k31_lat = 37.3860521; // 위도
-		double k31_lng = 127.1214038; // 경도
+		double k31_lat = 37.3860521; // 현재위치 위도
+		double k31_lng = 127.1214038; // 현재위치 경도
 
 		int k31_LineCnt = 0;
 		

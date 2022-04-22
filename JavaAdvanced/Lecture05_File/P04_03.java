@@ -23,23 +23,23 @@ public class P04_03 {
 
 		String[] k31_field_name = k31_readtxt.split(","); // 항목이름 String 배열 = readtxt를 ,로 나눈 값 저장
 
-		double k31_lat = 37.3860521; // 위도
-		double k31_lng = 127.1214038; // 경도
+		double k31_lat = 37.3860521; // 현재위치 위도
+		double k31_lng = 127.1214038; // 현재위치 경도
 		
-		double distMax = 0;
-		double distMin = 10;
-		String MaxAddress = "";
-		String MinAddress = "";
+		double distMax = 0; //최대값 계산을 위한 변수 선언 및 초기화
+		double distMin = 10; //최소값 계산을 위한 변수 선언 및 초기화
+		String MaxAddress = ""; //최대값 주소을 위한 변수 선언 및 초기화
+		String MinAddress = ""; //최소값 주소을 위한 변수 선언 및 초기화
 
-		while ((k31_readtxt = br.readLine()) != null) {
+		while ((k31_readtxt = br.readLine()) != null) { // 읽어드린 readtxt가 비어있지 않다면 
 
-			String[] k31_field = k31_readtxt.split(",");
-			double k31_dist = Math.sqrt(Math.pow(Double.parseDouble(k31_field[27]) - k31_lat, 2)
+			String[] k31_field = k31_readtxt.split(","); //String 배열 readtxt 쉼표로 분리하여 저장
+			double k31_dist = Math.sqrt(Math.pow(Double.parseDouble(k31_field[27]) - k31_lat, 2) // 거리 계산 피타고라스 정리
 					+ Math.pow(Double.parseDouble(k31_field[28]) - k31_lng, 2));
-			if (k31_dist > distMax) {
+			if (k31_dist > distMax) { //최대값을 위한 계산식
 				distMax = k31_dist;
 				MaxAddress= k31_field[4];
-			} else if (k31_dist < distMin) {
+			} else if (k31_dist < distMin) { //최소값을 위한 계산식
 				distMin = k31_dist;
 				MinAddress= k31_field[4];
 			}
