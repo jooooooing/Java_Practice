@@ -8,5 +8,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/local pc/Downloads/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/local pc/Downloads/kkma-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/local pc/Downloads/selenium-server-4.1.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
