@@ -31,7 +31,7 @@ public class Filter {
 		System.out.println("두번째 날짜를 입력해주세요.(ex.202004)");
 		int secondDay = sc.nextInt();
 
-		ArrayList<Integer> output = new ArrayList<Integer>();
+		ArrayList<Integer> output = new ArrayList<Integer>(); 
 		while ((line = read.readLine()) != null) {
 
 			String[] cutLine = line.split("\\|");
