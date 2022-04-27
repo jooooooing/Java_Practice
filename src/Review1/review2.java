@@ -1,4 +1,4 @@
-package realestateProject;
+package Review1;
 
 import java.util.Scanner;
 
