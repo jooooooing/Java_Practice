@@ -1,10 +1,10 @@
 package Lecture04;
 
 public class Elevator {
-	int k31_limit_up_floor = 10;
-	int k31_limit_down_floor = 0;
-	int k31_floor = 1;
-	String k31_help;
+	int k31_limit_up_floor = 10; //최상위 층
+	int k31_limit_down_floor = 0; //최하위 층
+	int k31_floor = 1; //현재층
+	String k31_help; //안내멘트 변수 선언
 
 	void up() {
 		if (k31_floor == k31_limit_up_floor) {

@@ -40,11 +40,7 @@ public class P05_Method {
 	static int k31_receiptCount = 31; // 영수증 순번
 	static double k31_pointRate = 0.001; // 포인트 적립률
 	
-//	static int k31_itemCount = 33;
-	
-
-
-	
+//	static int k31_itemCount = 33;	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub	
