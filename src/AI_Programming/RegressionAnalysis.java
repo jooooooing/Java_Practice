@@ -2,11 +2,18 @@ package AI_Programming;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class RegressionAnalysis {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
+//		System.out.println("몇 킬로 요금을 알고 싶나요?");
+//		Scanner scan = new Scanner(System.in);
+//		double inputDate = scan.nextDouble();
+		
 		
 		final int STARTNUM = 1000;
 		final int LASTNUM = 5000;
@@ -17,6 +24,8 @@ public class RegressionAnalysis {
 		
 		double y = 0;
 		double resultGap = 0;
+		int min = 0;
+		int index = 0;
 		
 		for (int a = STARTNUM; a <= LASTNUM; a += 100) {
 			//y값 계산
@@ -25,22 +34,25 @@ public class RegressionAnalysis {
 			double resultGapSum = 0;
 			for (int i = 0; i < 10; i++) {
 				y = distance[i] * a;
-//				System.out.println("y : " + y);
+				System.out.println("y : " + y);
 				resultGap = Math.abs(price[i] - y);
-//				System.out.println("gap : " + resultGap);
+				System.out.println("gap : " + resultGap);
+				
 				resultGapSum += resultGap;
 				if ( i == 9) {
 					resultGapSumArrs.add((int)resultGapSum);
 				}
+				
 			}
+			min = Collections.min(resultGapSumArrs); //ArrayList에서 최소값 찾기
+			index = resultGapSumArrs.indexOf(min); //찾은 최소값이 있는 ArrayList index 위치 찾기
+			System.out.println(min);      
+	        System.out.println(index);
+//			System.out.println("y = " + a + "x ==> 값 차이 : " + resultGapSumArrs);		
+			
 		}
 		
-		int min = Collections.min(resultGapSumArrs); //ArrayList에서 최소값 찾기
-//		System.out.println(min);      
-		int index = resultGapSumArrs.indexOf(min); //찾은 최소값이 있는 ArrayList index 위치 찾기
-//        System.out.println(index);
-        
-        System.out.println("최적의 a값 :" + (STARTNUM + (index*100))); // a + index * 100(증가 단위)
+		System.out.println("최적의 a값 :" + (STARTNUM + (index*100))); // a + index * 100(증가 단위)
 
 	}
 
