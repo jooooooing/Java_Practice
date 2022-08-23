@@ -7,8 +7,9 @@ public class kakao_id {
 
 	public static void main(String[] args) {
 
-		String new_id = ".AD1Casdd.[~!@#$%^&*()=+[{]}:?,<>/]321123123."; // 입력 1이상 1,000 이하의 문자열, 알파벳 대문자, 알파벳 소문자, 숫자,
-																// 특수문자(-_.~!@#$%^&*()=+[{]}:?,<>/)
+		String new_id = "...!@BaT#*...y.abcdefghijklm"; // 입력 1이상 1,000 이하의 문자열, 알파벳 대문자, 알파벳 소문자,
+														// 숫자,
+		// 특수문자(-_.~!@#$%^&*()=+[{]}:?,<>/)
 //		String new_id = "a"; //입력 1이상 1,000 이하의 문자열, 알파벳 대문자, 알파벳 소문자, 숫자, 특수문자(-_.~!@#$%^&*()=+[{]}:?,<>/)
 
 		// 아이디의 길이는 3자 이상 15자 이하
@@ -31,6 +32,9 @@ public class kakao_id {
 		System.out.println("특수문자 제거" + new_id);
 
 		// 마침표 처음과 끝 찾기
+		new_id = dontDotDot(new_id);
+		System.out.println("dontDotDot : " + new_id);
+
 		new_id = deleteDot(new_id);
 		System.out.println("deletDot : " + new_id);
 
@@ -70,7 +74,7 @@ public class kakao_id {
 		}
 		return new_id;
 	}
-	
+
 	private static String deleteDot(String new_id) {
 		// 마침표 처음과 끝 찾기
 		char[] tempChar = new char[new_id.length()];
@@ -79,9 +83,10 @@ public class kakao_id {
 		}
 
 		// 처음과 끝의 마침표를 빈문자로 치환함
-		if (tempChar[0] == '.' || tempChar[new_id.length() - 1] == '.') {
+		if (tempChar[0] == '.') {
 			tempChar[0] = '\0';
-			tempChar[new_id.length()-1] = '\0';
+		} else if (tempChar[new_id.length() - 1] == '.') {
+			tempChar[new_id.length() - 1] = '\0';
 		}
 
 		List<String> list = new ArrayList<>();
@@ -92,15 +97,41 @@ public class kakao_id {
 			}
 		}
 
-		System.out.println(list.size());
+		new_id = ""; // 초기화 한번 해줌
 		for (int i = 0; i < list.size(); i++) {
 			System.out.print(list.get(i));
 			System.out.println();
-			new_id = ""; //초기화 한번 해줌
-			new_id += list.get(i); //.을 제거한 값을 다시 넣어줌
+			new_id += list.get(i); // .을 제거한 값을 다시 넣어줌
 		}
-		
+
 		return new_id;
+	}
+
+	private static String dontDotDot(String new_id) {
+		char[] tempChar = new char[new_id.length()];
+		for (int i = 0; i < new_id.length(); i++) {
+			tempChar[i] = new_id.charAt(i);
+		}
+
+		List<String> list = new ArrayList<>();
+
+		list.add(Character.toString(tempChar[0]));
+
+		for (int i = 1; i < tempChar.length; i++) {
+			if (tempChar[i] == '.' && tempChar[i] == tempChar[i - 1]) {
+				list.remove(Character.toString(tempChar[i]));
+			} else {
+				list.add(Character.toString(tempChar[i]));
+			}
+		}
+
+		new_id = "";
+		for (int i = 0; i < list.size(); i++) {
+			new_id += list.get(i);
+		}
+
+		return new_id;
+
 	}
 
 }
