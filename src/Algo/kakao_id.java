@@ -36,7 +36,7 @@ public class kakao_id {
 		System.out.println("dontDotDot : " + new_id);
 
 		new_id = deleteDot(new_id);
-		System.out.println("deletDot : " + new_id);
+		System.out.println("deleteDot : " + new_id);
 
 	}
 
