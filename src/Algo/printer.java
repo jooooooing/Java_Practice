@@ -64,12 +64,18 @@ public class printer {
 
 		System.out.println("location : " + location);
 		int target = 0;
+		
+		List<Integer> keyList = new ArrayList<>(temp.keySet());
+		List<Integer> valueList = new ArrayList<>(temp.values());
+		
+		System.out.println(keyList);
+		System.out.println(valueList);
+		
 		for (Map.Entry<Integer, Integer> en : temp.entrySet()) {
 			System.out.println("Key = " + en.getKey() + ", Value = " + en.getValue());
 			if (location == en.getKey()) {
 				target = temp.get(en.getKey());
 			}
-			answer++;
 		}
 
 		System.out.println("target : " + target);
